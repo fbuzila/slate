@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <title>Lift Commerce API Reference</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -201,7 +201,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;JSON&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -209,12 +209,9 @@
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="images/logo.png" class="logo" alt="Logo" />
+     <a href="http://portal-dev.fintiv.co:3000/portal"> <img src="images/logoFintiv.jpg" class="logo" alt="Logofintiv" /> </a>
         <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
+              <a href="#" data-language-name="JSON">JSON</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -228,16 +225,109 @@
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
           </li>
           <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#companies" class="toc-h1 toc-link" data-title="Companies">Companies</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#create-company" class="toc-h2 toc-link" data-title="Create Company">Create Company</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
+                    <a href="#update-company" class="toc-h2 toc-link" data-title="Update Company">Update Company</a>
                   </li>
                   <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#request-parameters" class="toc-h2 toc-link" data-title="Request Parameters">Request Parameters</a>
+                  </li>
+                  <li>
+                    <a href="#get-company" class="toc-h2 toc-link" data-title="Get Company">Get Company</a>
+                  </li>
+                  <li>
+                    <a href="#get-entity-hierarchy" class="toc-h2 toc-link" data-title="Get Entity Hierarchy">Get Entity Hierarchy</a>
+                  </li>
+                  <li>
+                    <a href="#update-company-status" class="toc-h2 toc-link" data-title="Update Company Status">Update Company Status</a>
+                  </li>
+                  <li>
+                    <a href="#delete-company-address" class="toc-h2 toc-link" data-title="Delete Company Address">Delete Company Address</a>
+                  </li>
+                  <li>
+                    <a href="#get-company-users" class="toc-h2 toc-link" data-title="Get Company Users">Get Company Users</a>
+                  </li>
+                  <li>
+                    <a href="#close-company" class="toc-h2 toc-link" data-title="Close Company">Close Company</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#persons" class="toc-h1 toc-link" data-title="Persons">Persons</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#person-accounts" class="toc-h2 toc-link" data-title="Person Accounts">Person Accounts</a>
+                  </li>
+                  <li>
+                    <a href="#person-credentials" class="toc-h2 toc-link" data-title="Person Credentials">Person Credentials</a>
+                  </li>
+                  <li>
+                    <a href="#person-roles" class="toc-h2 toc-link" data-title="Person Roles">Person Roles</a>
+                  </li>
+                  <li>
+                    <a href="#person-profiles" class="toc-h2 toc-link" data-title="Person Profiles">Person Profiles</a>
+                  </li>
+                  <li>
+                    <a href="#person-contact-info" class="toc-h2 toc-link" data-title="Person Contact Info">Person Contact Info</a>
+                  </li>
+                  <li>
+                    <a href="#notifications" class="toc-h2 toc-link" data-title="Notifications">Notifications</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#money-containers" class="toc-h1 toc-link" data-title="Money Containers">Money Containers</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#add-money-container" class="toc-h2 toc-link" data-title="Add Money Container">Add Money Container</a>
+                  </li>
+                  <li>
+                    <a href="#create-account" class="toc-h2 toc-link" data-title="Create Account">Create Account</a>
+                  </li>
+                  <li>
+                    <a href="#get-money-containers" class="toc-h2 toc-link" data-title="Get Money Containers">Get Money Containers</a>
+                  </li>
+                  <li>
+                    <a href="#update-money-containers" class="toc-h2 toc-link" data-title="Update Money Containers">Update Money Containers</a>
+                  </li>
+                  <li>
+                    <a href="#remove-money-containers" class="toc-h2 toc-link" data-title="Remove Money Containers">Remove Money Containers</a>
+                  </li>
+                  <li>
+                    <a href="#get-account-balance" class="toc-h2 toc-link" data-title="Get Account Balance">Get Account Balance</a>
+                  </li>
+                  <li>
+                    <a href="#get-validation-fields" class="toc-h2 toc-link" data-title="Get Validation Fields">Get Validation Fields</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#offers" class="toc-h1 toc-link" data-title="Offers">Offers</a>
+          </li>
+          <li>
+            <a href="#rewards" class="toc-h1 toc-link" data-title="Rewards">Rewards</a>
+          </li>
+          <li>
+            <a href="#transactions" class="toc-h1 toc-link" data-title="Transactions">Transactions</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#prepare-transaction" class="toc-h2 toc-link" data-title="Prepare Transaction">Prepare Transaction</a>
+                  </li>
+                  <li>
+                    <a href="#execute-transaction" class="toc-h2 toc-link" data-title="Execute Transaction">Execute Transaction</a>
+                  </li>
+                  <li>
+                    <a href="#cancel-transaction" class="toc-h2 toc-link" data-title="Cancel Transaction">Cancel Transaction</a>
+                  </li>
+                  <li>
+                    <a href="#get-transaction-details" class="toc-h2 toc-link" data-title="Get Transaction Details">Get Transaction Details</a>
+                  </li>
+                  <li>
+                    <a href="#transaction-history-lookup" class="toc-h2 toc-link" data-title="Transaction History Lookup">Transaction History Lookup</a>
                   </li>
               </ul>
           </li>
@@ -254,185 +344,707 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+<p>Welcome to the Switch APIs.</p>
 
-<p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<p>We have language bindings in JSON. You can view code examples in the dark area to the right.</p>
 
 <p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h1 id='authentication'>Authentication</h1><h1 id='companies'>Companies</h1><h2 id='create-company'>Create Company</h2><h2 id='update-company'>Update Company</h2>
+<p>Update Company API allows Company Users to update their Company&#39;s Information. To change the status of a company see - Update
+Company Status API.</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<table><thead>
+<tr>
+<th>Method</th>
+<th>Post</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Resource URL</td>
+<td>/company/updateCompany</td>
+</tr>
+<tr>
+<td>Request Headers</td>
+<td>application/json text/plain</td>
+</tr>
+<tr>
+<td>Response Formats</td>
+<td>application/json text/plain; charset=utf-8</td>
+</tr>
+<tr>
+<td>Entitlements</td>
+<td>UPDATE_COMPANY</td>
+</tr>
+<tr>
+<td>Required Authentication</td>
+<td>Yes</td>
+</tr>
+</tbody></table>
+<h3 id='header-parameters'>Header Parameters</h3>
+<table><thead>
+<tr>
+<th>Content-Type</th>
+<th>application/json</th>
+<th>Comment</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Token</td>
+<td>Execute the SignOn request as the caller to generate a new token. )</td>
+<td>Optional if Authorization is passed</td>
+</tr>
+<tr>
+<td>tenantName</td>
+<td>Tenant name.  Upper case only.  Entry is case sensitive</td>
+<td></td>
+</tr>
+<tr>
+<td>Api-Key</td>
+<td>API-Key</td>
+<td>TYK Key</td>
+</tr>
+<tr>
+<td>Authorization</td>
+<td>Barrer {{sub_token}}</td>
+<td>Optional if token is passed</td>
+</tr>
+</tbody></table>
+<h2 id='request-parameters'>Request Parameters</h2>
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: center">Required</th>
+<th style="text-align: left">Description</th>
+<th style="text-align: left">Value/Range</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">Id</td>
+<td style="text-align: center">yes</td>
+<td style="text-align: left">Unique Company ID company. This value is auto-generated in the Create Company API</td>
+<td style="text-align: left">Integer</td>
+</tr>
+<tr>
+<td style="text-align: left">Name</td>
+<td style="text-align: center">yes</td>
+<td style="text-align: left">Company Name</td>
+<td style="text-align: left">Alphanumeric and special characters allowed.</td>
+</tr>
+<tr>
+<td style="text-align: left">companyCode</td>
+<td style="text-align: center">yes</td>
+<td style="text-align: left">This is a Company code assigned by corporate.</td>
+<td style="text-align: left">Alphanumeric</td>
+</tr>
+<tr>
+<td style="text-align: left">parentId</td>
+<td style="text-align: center">no</td>
+<td style="text-align: left">This is a Parent Id of the Company created.</td>
+<td style="text-align: left">Integer</td>
+</tr>
+<tr>
+<td style="text-align: left">country</td>
+<td style="text-align: center">no</td>
+<td style="text-align: left">Country where the company is located.</td>
+<td style="text-align: left">Alpha Returns 3 letter country code. Should comply with ISO 3166.</td>
+</tr>
+<tr>
+<td style="text-align: left">timezoneFormatted</td>
+<td style="text-align: center">yes</td>
+<td style="text-align: left">Joda-Time is the replacement for the Java date and time classes. http://www.joda.org/joda-time/key_format.html.time zone_formatted is populated with the getTimeZones API, and is then used to populate the timezone and timezoneOffset columns on the back end, that are returned</td>
+<td style="text-align: left">Must comply with: http://joda-time.sourceforge.net/timezones.html</td>
+</tr>
+<tr>
+<td style="text-align: left">profileItems</td>
+<td style="text-align: center">no</td>
+<td style="text-align: left">Key-value pairs of information specific to a Company.</td>
+<td style="text-align: left">string</td>
+</tr>
+<tr>
+<td style="text-align: left">profileItemsSecure</td>
+<td style="text-align: center">no</td>
+<td style="text-align: left">Key-value pairs of secure information specific to a Company.</td>
+<td style="text-align: left">string</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Update Company Address REQUEST
+```json
+Request</p>
+</blockquote>
+
+<p>{
+&quot;id&quot;:&quot;1413&quot;,
+&quot;name&quot;:&quot;Freddies Fast Food&quot;,
+&quot;companyCode&quot;:&quot;FR-103&quot;,
+&quot;country&quot;:&quot;USA&quot;,
+&quot;timezoneFormatted&quot;:&quot;EST&quot;,
+&quot;profileItems&quot;: [
+{&quot;key&quot;: &quot;OWNER&quot;, &quot;value&quot;: &quot;John Doe&quot;}
+],
+&quot;profileItemsSecure&quot;: [
+{&quot;key&quot;: &quot;safe_combo&quot;, &quot;value&quot;: &quot;12345&quot;}
+}</p>
+<pre class="highlight plaintext"><code>&gt; Update Company Address REQUEST
+
+## Response Parameters
+| Name| Description | Value/Range |
+| :---        | :---           | :--- |
+| contextResponse | Response context. | tenantName&lt;br&gt; statusCode - See status codes&lt;br&gt; additionalStatusCode&lt;br&gt; statusMessage&lt;br&gt; additionalStatusMessage&lt;br&gt; errorArgs&lt;br&gt; errors|          
+|companyID      | Unique Company ID for each entity on the server. | Integer |
+| name      | This is a Company name. | Alphanumeric |
+| companyCode| Company code assigned by corporate. | Alphanumeric |
+| country| Physical location of the company. | Alpha 3 letter country code. Must comply with ISO 3166. |
+| timezone | Company's timezone. Auto-filled. | Must comply with: http://joda-time.sourceforge.net/timezones.html |
+| timezoneOffset | Time Zones around the world are expressed as positive or negative offsets from UTC. Timezones will offset from UTC without DST. This value is returned in the response, and is derived from the Canoni cal ID that is passed from thetimezone_formatted column. | Must comply with: http://joda-time.sourceforge.net/timezones.html |
+| status| This is the current status of the company account. | Alphanumeric &lt;br&gt; ACTIVE / SUSPENDED / CLOSED &lt;br&gt; See Company page for more information. |
+| amlFlag| Flag to determine if there was an AML hit. | Boolean &lt;br&gt; true/false |
+| profile_items | Key-value pairs of additional information for a Company. Not Secure |String |
+| profile_items_secure | Key-value pairs of private information for a Company. This information is encrypted |String |
+
+
+```json
+
+Response
+
+{"updateCompanyResponse":{"contextResponse":{"tenantName":"CBD",
+"statusCode":"SUCCESS","errors":null},
+"company":{"name":"Freddies Fast Food",
+"companyCode":"FR-103",
+"country":"USA",
+"timezone":"EST",
+"timezoneOffset":"-05:00",
+"profileItems":{"key":"OWNER",
+"value":"John Doe"},
+"profileItemsSecure":{"key":"safe_combo",
+"value":"12345"},
+"id":"1413","status":"ACTIVE"}}}
+
+</code></pre><h2 id='get-company'>Get Company</h2><h2 id='get-entity-hierarchy'>Get Entity Hierarchy</h2><h2 id='update-company-status'>Update Company Status</h2><h2 id='delete-company-address'>Delete Company Address</h2>
+<p>Removes address information from a Company. This API operates on one company address entry using the unique address ID that was created when the company address was initially entered in the system.</p>
+
+<table><thead>
+<tr>
+<th>Method</th>
+<th>Post</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Resource URL</td>
+<td>/company/deleteCompanyAddress</td>
+</tr>
+<tr>
+<td>Request Headers</td>
+<td>application/json text/plain</td>
+</tr>
+<tr>
+<td>Response Formats</td>
+<td>application/json text/plain; charset=utf-8</td>
+</tr>
+<tr>
+<td>Entitlements</td>
+<td>DELETE_COMPANY_ADDRESS</td>
+</tr>
+<tr>
+<td>Required Authentication</td>
+<td>Yes</td>
+</tr>
+</tbody></table>
+<h3 id='header-parameters-2'>Header Parameters</h3>
+<table><thead>
+<tr>
+<th>Content-Type</th>
+<th>application/json</th>
+<th>Comment</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Token</td>
+<td>Execute the SignOn request as the caller to generate a new token. )</td>
+<td>Optional if Authorization is passed</td>
+</tr>
+<tr>
+<td>tenantName</td>
+<td>Tenant name.  Upper case only.  Entry is case sensitive</td>
+<td></td>
+</tr>
+<tr>
+<td>Api-Key</td>
+<td>API-Key</td>
+<td>TYK Key</td>
+</tr>
+<tr>
+<td>Authorization</td>
+<td>Bearer {{sub_token}}</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Optional if token is passed</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Request
+```json
+Request</p>
+</blockquote>
+
+<p>{
+&quot;companyId&quot;:&quot;1413&quot;,
+&quot;addressId&quot;:&quot;7&quot;
+}
+```</p>
+
+<blockquote>
+<p>Successful Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="s2">"deleteCompanyAddressResponse"</span><span class="p">:{</span><span class="w">
+</span><span class="s2">"contextResponse"</span><span class="p">:{</span><span class="s2">"tenantName"</span><span class="p">:</span><span class="s2">"CBD"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"statusCode"</span><span class="p">:</span><span class="s2">"SUCCESS"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"errors"</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span><span class="w">
+</span><span class="s2">"companyAddressId"</span><span class="p">:</span><span class="s2">"7"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"companyId"</span><span class="p">:</span><span class="s2">"1413"</span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Error  Response
+Error if an invalid address ID is submitted
+Response HTTP 1/1 200 OK</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+</span><span class="s2">"deleteCompanyAddressResponse"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="s2">"contextResponse"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="s2">"tenantName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"channel_sdk"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"statusCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SERVICE"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"statusMessage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"No entity address found with id: 7653"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"errorArgs"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+</span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+</span><span class="s2">"companyAddressId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"companyId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='request-parameter'>Request Parameter</h3>
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: center">Required</th>
+<th style="text-align: left">Description</th>
+<th style="text-align: left">Value/Range</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">companyId</td>
+<td style="text-align: center">yes</td>
+<td style="text-align: left">Unique Company ID company. This value is auto-generated in the Create Company API</td>
+<td style="text-align: left">Integer</td>
+</tr>
+<tr>
+<td style="text-align: left">addressId</td>
+<td style="text-align: center">yes</td>
+<td style="text-align: left">Unique address ID for an address belonging to a company. This value is auto-generated with the Add Company API.</td>
+<td style="text-align: left">Integer</td>
+</tr>
+</tbody></table>
+<h3 id='response-parameters'>Response Parameters</h3>
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Description</th>
+<th style="text-align: left">Value/Range</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">contextResponse</td>
+<td style="text-align: left">Response context.</td>
+<td style="text-align: left"><li>tenantName <li>statusCode - See status codes <li>additionalStatusCode <li>statusMessage   <li> additionalStatusMessage <li>errorArgs <li> errors</td>
+</tr>
+<tr>
+<td style="text-align: left">companyAddressId</td>
+<td style="text-align: left">Unique address ID for an address generated for a company address</td>
+<td style="text-align: left">Integer</td>
+</tr>
+<tr>
+<td style="text-align: left">companyID</td>
+<td style="text-align: left">Unique Company ID. This value was auto-generated when the company was initially created.</td>
+<td style="text-align: left">Integer</td>
+</tr>
+</tbody></table>
+<h2 id='get-company-users'>Get Company Users</h2><h2 id='close-company'>Close Company</h2>
+<p><link href="style.less" rel="stylesheet"></link></p>
+
+<p>This operation closes a company and remove all users from the company. Closing a company changes the status flag from &quot;ACTIVE&quot; to
+&quot;CLOSED&quot; when the operation has completed. The company info is not removed from the database.
+Close company also has the option of closing all child companies and removing all the associated company users from the hierarchical tree.</p>
+
+<p>Before the company is closed, a query is performed to verify all the companies&#39; have a zero balance. If there is a balance, the company cannot be closed.</p>
+
+<blockquote>
+<p>Close Company REQUEST</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+</span><span class="s2">"companyId"</span><span class="p">:</span><span class="s2">"40612"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"closeUsers"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+</span><span class="s2">"closeChildCompanies"</span><span class="p">:</span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Close Company RESPONSE</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+</span><span class="s2">"closeCompanyResponse"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="s2">"contextResponse"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="s2">"tenantName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CBD"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"statusCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SUCCESS"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="s2">"companyId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"40612"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Method</th>
+<th>Post</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Resource URL</td>
+<td>/company/closeCompany</td>
+</tr>
+<tr>
+<td>Request Headers</td>
+<td>application/json text/plain</td>
+</tr>
+<tr>
+<td>Response Formats</td>
+<td>application/json text/plain; charset=utf-8</td>
+</tr>
+<tr>
+<td>Entitlements</td>
+<td>CLOSE_COMPANY</td>
+</tr>
+<tr>
+<td>Required Authentication</td>
+<td>Yes</td>
+</tr>
+</tbody></table>
+<h3 id='header-paramaters'>Header Paramaters</h3>
+<table><thead>
+<tr>
+<th>Content-Type</th>
+<th>application/json</th>
+<th>Comment</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Token</td>
+<td>Execute the SignOn request as the caller to generate a new token. )</td>
+<td>Optional if Authorization is passed</td>
+</tr>
+<tr>
+<td>tenantName</td>
+<td>Tenant name.  Upper case only.  Entry is case sensitive</td>
+<td></td>
+</tr>
+<tr>
+<td>Api-Key</td>
+<td>API-Key</td>
+<td>TYK Key</td>
+</tr>
+<tr>
+<td>Authorization</td>
+<td>Barrer {{sub_token}}</td>
+<td>Optional if token is passed</td>
+</tr>
+</tbody></table>
+<h3 id='request-parameters-2'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: center">Required</th>
+<th style="text-align: left">Description</th>
+<th style="text-align: left">Value/Range</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">companyId</td>
+<td style="text-align: center">yes</td>
+<td style="text-align: left">Unique Company ID company. This value is auto-generated in the Create Company API</td>
+<td style="text-align: left">Integer</td>
+</tr>
+<tr>
+<td style="text-align: left">closeUsers</td>
+<td style="text-align: center">yes<br>  no</td>
+<td style="text-align: left">Yes, to remove all Company users from the company.</td>
+<td style="text-align: left">Boolean<br> True/False</td>
+</tr>
+<tr>
+<td style="text-align: left">closeChildCompanies</td>
+<td style="text-align: center">yes<br>  no</td>
+<td style="text-align: left">Yes, to close all child companies (entities) that are in the company&#39;s hierarchy.</td>
+<td style="text-align: left">Boolean<br> True/False</td>
+</tr>
+</tbody></table>
+<h3 id='response-parameters-2'>Response Parameters</h3>
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Description</th>
+<th style="text-align: left">Value/Range</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">contextResponse</td>
+<td style="text-align: left">Response context</td>
+<td style="text-align: left">tenantName<br> statusCode - See status codes<br> additionalStatusCode<br> statusMessage<br> additionalStatusMessage<br> errorArgs<br> errors</td>
+</tr>
+<tr>
+<td style="text-align: left">companyID</td>
+<td style="text-align: left">Unique Company ID. This value was auto-generated when the company was initially created.</td>
+<td style="text-align: left">Autogenerated Integer</td>
+</tr>
+</tbody></table>
+<h1 id='persons'>Persons</h1><h2 id='person-accounts'>Person Accounts</h2><h2 id='person-credentials'>Person Credentials</h2><h2 id='person-roles'>Person Roles</h2><h2 id='person-profiles'>Person Profiles</h2><h2 id='person-contact-info'>Person Contact Info</h2><h2 id='notifications'>Notifications</h2><h1 id='money-containers'>Money Containers</h1><h2 id='add-money-container'>Add Money Container</h2><h2 id='create-account'>Create Account</h2>
+<blockquote>
+<p>A subscriber creates a SVA account.
+Create Account Request</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"personId"</span><span class="p">:</span><span class="s2">"1394952276"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"containerType"</span><span class="p">:</span><span class="s2">"SVA"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"isDefault"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"currency"</span><span class="p">:</span><span class="s2">"840"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"attributesSecure"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+     </span><span class="p">{</span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"send_no_email"</span><span class="p">,</span><span class="w"> </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="p">},</span><span class="w">
+     </span><span class="p">{</span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"first_name"</span><span class="p">,</span><span class="w"> </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jane"</span><span class="p">},</span><span class="w">
+     </span><span class="p">{</span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"last_name"</span><span class="p">,</span><span class="w"> </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Doe"</span><span class="p">},</span><span class="w">
+     </span><span class="p">{</span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACCOUNT_NAME"</span><span class="p">,</span><span class="w"> </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">" Fancy Burgers Loyalty Program"</span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Create Account Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="s2">"createAccountResponse"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+ </span><span class="s2">"contextResponse"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+   </span><span class="s2">"tenantName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CBD"</span><span class="p">,</span><span class="w">
+   </span><span class="s2">"statusCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SUCCESS"</span><span class="p">,</span><span class="w">
+   </span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+ </span><span class="p">},</span><span class="w">
+ </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5890"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>A Company User creates a SVA for their company.
+Create Account Request</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"entityId"</span><span class="p">:</span><span class="s2">"307"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"containerType"</span><span class="p">:</span><span class="s2">"SVA"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"isDefault"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"currency"</span><span class="p">:</span><span class="s2">"840"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"attributesSecure"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+     </span><span class="p">{</span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"send_no_email"</span><span class="p">,</span><span class="w"> </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="p">},</span><span class="w">
+     </span><span class="p">{</span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"first_name_of_program_manager"</span><span class="p">,</span><span class="w"> </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Joe"</span><span class="p">},</span><span class="w">
+     </span><span class="p">{</span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"last_name_of_program_manager"</span><span class="p">,</span><span class="w"> </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Manager"</span><span class="p">},</span><span class="w">
+     </span><span class="p">{</span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACCOUNT_NAME"</span><span class="p">,</span><span class="w"> </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Store's SVA for their Loyalty Program"</span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Create Account Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+ </span><span class="s2">"createAccountResponse"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+   </span><span class="s2">"contextResponse"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+     </span><span class="s2">"tenantName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CBD"</span><span class="p">,</span><span class="w">
+     </span><span class="s2">"statusCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SUCCESS"</span><span class="p">,</span><span class="w">
+     </span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+   </span><span class="p">},</span><span class="w">
+   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6141"</span><span class="w">
+ </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Error Responses
+Condition: If any of the parameters are invalid.
+HTTP Status Code: <code>4XX BAD REQUEST</code>
+Example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+   </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+       </span><span class="s2">"Please provide a valid currency code."</span><span class="p">,</span><span class="w">
+   </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Method</th>
+<th>Post</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Resource URL</td>
+<td>/moneyContainer/accounts</td>
+</tr>
+<tr>
+<td>Request Headers</td>
+<td>application/json text/plain</td>
+</tr>
+<tr>
+<td>Response Formats</td>
+<td>application/json text/plain; charset=utf-8</td>
+</tr>
+<tr>
+<td>Entitlements</td>
+<td>CLOSE_COMPANY</td>
+</tr>
+<tr>
+<td>Required Authentication</td>
+<td>Yes</td>
+</tr>
+</tbody></table>
+<h3 id='header-paramaters-2'>Header Paramaters</h3>
+<table><thead>
+<tr>
+<th>Content-Type</th>
+<th>application/json</th>
+<th>Comment</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Token</td>
+<td>Execute the SignOn request as the caller to generate a new token. )</td>
+<td>Optional if Authorization is passed</td>
+</tr>
+<tr>
+<td>tenantName</td>
+<td>Tenant name.  Upper case only.  Entry is case sensitive</td>
+<td></td>
+</tr>
+<tr>
+<td>Api-Key</td>
+<td>API-Key</td>
+<td>TYK Key</td>
+</tr>
+<tr>
+<td>Authorization</td>
+<td>Barrer {{sub_token}}</td>
+<td>Optional if token is passed</td>
+</tr>
+</tbody></table>
+<h3 id='overview'>Overview</h3>
+<p>This application creates a financial account on the third party system. A third party system may be either a coupon or a loyalty program provider.
+When an account is initially requested, a new account is created in the third party. After the account is successfully created on the third party, a new Money Container is created in the Switch with a unique ID. This unique ID is used as the reference when accessing the money container.
+<a href="http://www.google.com">See <em>Money Containers</em></a> for a full list of container types, sub-types, input parameters, attributes, and secure attributes for all money containers.</p>
+<h3 id='use-cases'>Use Cases</h3>
+<ul>
+<li>Company Users can create accounts for a company SVA, a Loyalty program, or an Offers program.</li>
+<li>Company Users can create accounts on behalf of a Subscriber.</li>
+<li>Company Users cannot create personal Money Containers, or use Money Containers for personal use.</li>
+<li>Subscribers can create accounts for their own SVAs, Offers and Loyalty programs.</li>
+</ul>
+<h3 id='request-parameters-3'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Required</th>
+<th style="text-align: left">Description</th>
+<th style="text-align: left">Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><code>personId</code></td>
+<td style="text-align: left">no</td>
+<td style="text-align: left">A generated ID used to identify the use.</td>
+<td style="text-align: left">Auto-generated and sequenced incrementally.</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>entityId</code></td>
+<td style="text-align: left">no</td>
+<td style="text-align: left">The value must be entered if the user is a company related user. Subscribers are not associated with any company do not require this value.</td>
+<td style="text-align: left">Auto-generated and sequenced incrementally.</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>containerType</code></td>
+<td style="text-align: left">yes</td>
+<td style="text-align: left">This value is the parent of the container subTypes</td>
+<td style="text-align: left"><a href="https://www.google.com">See <em>Money Containers</em></a> for additional information.</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>containersubtype</code></td>
+<td style="text-align: left">no</td>
+<td style="text-align: left">Sub container type</td>
+<td style="text-align: left"><a href="http://www.google.com">See <em>Money Containers</em></a> for additional information</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>isDefault</code></td>
+<td style="text-align: left">yes</td>
+<td style="text-align: left">Designate if this money container will be used as the default money container.</td>
+<td style="text-align: left">Boolean <br> true or false</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>attributes</code></td>
+<td style="text-align: left">yes</td>
+<td style="text-align: left">Key value pairs required by the third party.</td>
+<td style="text-align: left">Array of objects</td>
+</tr>
+</tbody></table>
+<h4 id='attributes'>Attributes</h4>
+<table><thead>
+<tr>
+<th style="text-align: left">key</th>
+<th style="text-align: left">Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><code>send_no_email</code></td>
+<td style="text-align: left">true or false</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>first_name</code></td>
+<td style="text-align: left">string</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>last_name</code></td>
+<td style="text-align: left">string</td>
+</tr>
+</tbody></table>
+<h3 id='response-parameters-3'>Response Parameters</h3>
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Required</th>
+<th style="text-align: left">Description</th>
+<th style="text-align: left">Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><code>contextResponse</code></td>
+<td style="text-align: left">yes</td>
+<td style="text-align: left">Response returned</td>
+<td style="text-align: left">tenantName<br>statusCode<br>errors</td>
+</tr>
+</tbody></table>
+<h3 id='examples'>Examples</h3>
+<p>** Note:**
+* The money container flag is set to <code>false</code> by default when it&#39;s initially created.  In order for a money container to be accessible, the value must be set to <code>true</code>.</p>
+<h2 id='get-money-containers'>Get Money Containers</h2><h2 id='update-money-containers'>Update Money Containers</h2><h2 id='remove-money-containers'>Remove Money Containers</h2><h2 id='get-account-balance'>Get Account Balance</h2><h2 id='get-validation-fields'>Get Validation Fields</h2><h1 id='offers'>Offers</h1><h1 id='rewards'>Rewards</h1><h1 id='transactions'>Transactions</h1><h2 id='prepare-transaction'>Prepare Transaction</h2><h2 id='execute-transaction'>Execute Transaction</h2><h2 id='cancel-transaction'>Cancel Transaction</h2><h2 id='get-transaction-details'>Get Transaction Details</h2><h2 id='transaction-history-lookup'>Transaction History Lookup</h2><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
 
 <span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
 </code></pre>
 <blockquote>
 <p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
 </blockquote>
+<pre class="highlight plaintext"><code>
 
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
 
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code>Authorization: meowmeowmeow</code></p>
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody></table>
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
-</tr>
-</tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
-</tr>
-</tbody></table>
-<h1 id='errors'>Errors</h1>
+&gt; The above command returns JSON structured like this:
+</code></pre><h1 id='errors'>Errors</h1>
 <aside class="notice">
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
 </aside>
@@ -494,10 +1106,7 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
+                <a href="#" data-language-name="JSON">JSON</a>
           </div>
       </div>
     </div>
