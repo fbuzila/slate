@@ -6,7 +6,46 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>API Documentation</title>
+    	<style>
+		.copy-code-button {
+			color: #272822;
+			background-color: #FFF;
+			border-color: #272822;
+			border: 2px solid;
+			border-radius: 3px 3px 0px 0px;
 
+			/* right-align */
+			display: block;
+			margin-left: auto;
+			margin-right: 0;
+
+			margin-bottom: -2px;
+			padding: 3px 8px;
+			font-size: 0.8em;
+		}
+
+		.copy-code-button:hover {
+			cursor: pointer;
+			background-color: #F2F2F2;
+		}
+
+		.copy-code-button:focus {
+			/* Avoid an ugly focus outline on click in Chrome,
+		       but darken the button for accessibility.
+		       See https://stackoverflow.com/a/25298082/1481479 */
+			background-color: #E6E6E6;
+			outline: 0;
+		}
+
+		.copy-code-button:active {
+			background-color: #D9D9D9;
+		}
+
+		.highlight pre {
+			/* Avoid pushing up the copy buttons. */
+			margin: 0;
+		}
+	</style>
     <style>
       .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
@@ -198,7 +237,9 @@
     </style>
     <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+  
       <script src="javascripts/all_nosearch.js"></script>
+	
   </head>
 
   <body class="createAccount2" data-languages="[]">
@@ -230,6 +271,8 @@
           </li>
       </ul>
     </div>
+
+
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
@@ -345,5 +388,9 @@
       <div class="dark-box">
       </div>
     </div>
+
+
   </body>
+<script src="javascripts/copycode.js"></script>
+
 </html>

@@ -6,7 +6,46 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Lift Commerce API Reference</title>
+    	<style>
+		.copy-code-button {
+			color: #272822;
+			background-color: #FFF;
+			border-color: #272822;
+			border: 2px solid;
+			border-radius: 3px 3px 0px 0px;
 
+			/* right-align */
+			display: block;
+			margin-left: auto;
+			margin-right: 0;
+
+			margin-bottom: -2px;
+			padding: 3px 8px;
+			font-size: 0.8em;
+		}
+
+		.copy-code-button:hover {
+			cursor: pointer;
+			background-color: #F2F2F2;
+		}
+
+		.copy-code-button:focus {
+			/* Avoid an ugly focus outline on click in Chrome,
+		       but darken the button for accessibility.
+		       See https://stackoverflow.com/a/25298082/1481479 */
+			background-color: #E6E6E6;
+			outline: 0;
+		}
+
+		.copy-code-button:active {
+			background-color: #D9D9D9;
+		}
+
+		.highlight pre {
+			/* Avoid pushing up the copy buttons. */
+			margin: 0;
+		}
+	</style>
     <style>
       .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
@@ -198,7 +237,9 @@
     </style>
     <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+  
       <script src="javascripts/all.js"></script>
+	
   </head>
 
   <body class="index" data-languages="[&quot;JSON&quot;]">
@@ -232,9 +273,6 @@
                   </li>
                   <li>
                     <a href="#update-company" class="toc-h2 toc-link" data-title="Update Company">Update Company</a>
-                  </li>
-                  <li>
-                    <a href="#request-parameters" class="toc-h2 toc-link" data-title="Request Parameters">Request Parameters</a>
                   </li>
                   <li>
                     <a href="#get-company" class="toc-h2 toc-link" data-title="Get Company">Get Company</a>
@@ -340,6 +378,8 @@
             <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
         </ul>
     </div>
+
+
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
@@ -405,11 +445,45 @@ Company Status API.</p>
 </tr>
 <tr>
 <td>Authorization</td>
-<td>Barrer {{sub_token}}</td>
+<td>Bearer {{sub_token}}</td>
 <td>Optional if token is passed</td>
 </tr>
 </tbody></table>
-<h2 id='request-parameters'>Request Parameters</h2>
+
+<blockquote>
+<p>Update Company Request</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+</span><span class="s2">"id"</span><span class="p">:</span><span class="s2">"1413"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"Freddies Fast Food"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"companyCode"</span><span class="p">:</span><span class="s2">"FR-103"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"country"</span><span class="p">:</span><span class="s2">"USA"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"timezoneFormatted"</span><span class="p">:</span><span class="s2">"EST"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"profileItems"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span><span class="p">{</span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OWNER"</span><span class="p">,</span><span class="w"> </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John Doe"</span><span class="p">}</span><span class="w">
+</span><span class="p">],</span><span class="w">
+</span><span class="s2">"profileItemsSecure"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span><span class="p">{</span><span class="s2">"key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"safe_combo"</span><span class="p">,</span><span class="w"> </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345"</span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Update Company Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="p">{</span><span class="s2">"updateCompanyResponse"</span><span class="p">:{</span><span class="s2">"contextResponse"</span><span class="p">:{</span><span class="s2">"tenantName"</span><span class="p">:</span><span class="s2">"CBD"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"statusCode"</span><span class="p">:</span><span class="s2">"SUCCESS"</span><span class="p">,</span><span class="s2">"errors"</span><span class="p">:</span><span class="kc">null</span><span class="p">},</span><span class="w">
+</span><span class="s2">"company"</span><span class="p">:{</span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"Freddies Fast Food"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"companyCode"</span><span class="p">:</span><span class="s2">"FR-103"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"country"</span><span class="p">:</span><span class="s2">"USA"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"timezone"</span><span class="p">:</span><span class="s2">"EST"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"timezoneOffset"</span><span class="p">:</span><span class="s2">"-05:00"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"profileItems"</span><span class="p">:{</span><span class="s2">"key"</span><span class="p">:</span><span class="s2">"OWNER"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"value"</span><span class="p">:</span><span class="s2">"John Doe"</span><span class="p">},</span><span class="w">
+</span><span class="s2">"profileItemsSecure"</span><span class="p">:{</span><span class="s2">"key"</span><span class="p">:</span><span class="s2">"safe_combo"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"value"</span><span class="p">:</span><span class="s2">"12345"</span><span class="p">},</span><span class="w">
+</span><span class="s2">"id"</span><span class="p">:</span><span class="s2">"1413"</span><span class="p">,</span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"ACTIVE"</span><span class="p">}}}</span><span class="w">
+</span></code></pre><h3 id='request-parameters'>Request Parameters</h3>
 <table><thead>
 <tr>
 <th style="text-align: left">Name</th>
@@ -467,62 +541,73 @@ Company Status API.</p>
 <td style="text-align: left">string</td>
 </tr>
 </tbody></table>
-
-<blockquote>
-<p>Update Company Address REQUEST
-```json
-Request</p>
-</blockquote>
-
-<p>{
-&quot;id&quot;:&quot;1413&quot;,
-&quot;name&quot;:&quot;Freddies Fast Food&quot;,
-&quot;companyCode&quot;:&quot;FR-103&quot;,
-&quot;country&quot;:&quot;USA&quot;,
-&quot;timezoneFormatted&quot;:&quot;EST&quot;,
-&quot;profileItems&quot;: [
-{&quot;key&quot;: &quot;OWNER&quot;, &quot;value&quot;: &quot;John Doe&quot;}
-],
-&quot;profileItemsSecure&quot;: [
-{&quot;key&quot;: &quot;safe_combo&quot;, &quot;value&quot;: &quot;12345&quot;}
-}</p>
-<pre class="highlight plaintext"><code>&gt; Update Company Address REQUEST
-
-## Response Parameters
-| Name| Description | Value/Range |
-| :---        | :---           | :--- |
-| contextResponse | Response context. | tenantName&lt;br&gt; statusCode - See status codes&lt;br&gt; additionalStatusCode&lt;br&gt; statusMessage&lt;br&gt; additionalStatusMessage&lt;br&gt; errorArgs&lt;br&gt; errors|          
-|companyID      | Unique Company ID for each entity on the server. | Integer |
-| name      | This is a Company name. | Alphanumeric |
-| companyCode| Company code assigned by corporate. | Alphanumeric |
-| country| Physical location of the company. | Alpha 3 letter country code. Must comply with ISO 3166. |
-| timezone | Company's timezone. Auto-filled. | Must comply with: http://joda-time.sourceforge.net/timezones.html |
-| timezoneOffset | Time Zones around the world are expressed as positive or negative offsets from UTC. Timezones will offset from UTC without DST. This value is returned in the response, and is derived from the Canoni cal ID that is passed from thetimezone_formatted column. | Must comply with: http://joda-time.sourceforge.net/timezones.html |
-| status| This is the current status of the company account. | Alphanumeric &lt;br&gt; ACTIVE / SUSPENDED / CLOSED &lt;br&gt; See Company page for more information. |
-| amlFlag| Flag to determine if there was an AML hit. | Boolean &lt;br&gt; true/false |
-| profile_items | Key-value pairs of additional information for a Company. Not Secure |String |
-| profile_items_secure | Key-value pairs of private information for a Company. This information is encrypted |String |
-
-
-```json
-
-Response
-
-{"updateCompanyResponse":{"contextResponse":{"tenantName":"CBD",
-"statusCode":"SUCCESS","errors":null},
-"company":{"name":"Freddies Fast Food",
-"companyCode":"FR-103",
-"country":"USA",
-"timezone":"EST",
-"timezoneOffset":"-05:00",
-"profileItems":{"key":"OWNER",
-"value":"John Doe"},
-"profileItemsSecure":{"key":"safe_combo",
-"value":"12345"},
-"id":"1413","status":"ACTIVE"}}}
-
-</code></pre><h2 id='get-company'>Get Company</h2><h2 id='get-entity-hierarchy'>Get Entity Hierarchy</h2><h2 id='update-company-status'>Update Company Status</h2><h2 id='delete-company-address'>Delete Company Address</h2>
-<p>Removes address information from a Company. This API operates on one company address entry using the unique address ID that was created when the company address was initially entered in the system.</p>
+<h3 id='response-parameters'>Response Parameters</h3>
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Description</th>
+<th style="text-align: left">Value/Range</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">contextResponse</td>
+<td style="text-align: left">Response context.</td>
+<td style="text-align: left">tenantName<br> statusCode - See status codes<br> additionalStatusCode<br> statusMessage<br> additionalStatusMessage<br> errorArgs<br> errors</td>
+</tr>
+<tr>
+<td style="text-align: left">companyID</td>
+<td style="text-align: left">Unique Company ID for each entity on the server.</td>
+<td style="text-align: left">Integer</td>
+</tr>
+<tr>
+<td style="text-align: left">name</td>
+<td style="text-align: left">This is a Company name.</td>
+<td style="text-align: left">Alphanumeric</td>
+</tr>
+<tr>
+<td style="text-align: left">companyCode</td>
+<td style="text-align: left">Company code assigned by corporate.</td>
+<td style="text-align: left">Alphanumeric</td>
+</tr>
+<tr>
+<td style="text-align: left">country</td>
+<td style="text-align: left">Physical location of the company.</td>
+<td style="text-align: left">Alpha 3 letter country code. Must comply with ISO 3166.</td>
+</tr>
+<tr>
+<td style="text-align: left">timezone</td>
+<td style="text-align: left">Company&#39;s timezone. Auto-filled.</td>
+<td style="text-align: left">Must comply with: http://joda-time.sourceforge.net/timezones.html</td>
+</tr>
+<tr>
+<td style="text-align: left">timezoneOffset</td>
+<td style="text-align: left">Time Zones around the world are expressed as positive or negative offsets from UTC. Timezones will offset from UTC without DST. This value is returned in the response, and is derived from the Canoni cal ID that is passed from thetimezone_formatted column.</td>
+<td style="text-align: left">Must comply with: http://joda-time.sourceforge.net/timezones.html</td>
+</tr>
+<tr>
+<td style="text-align: left">status</td>
+<td style="text-align: left">This is the current status of the company account.</td>
+<td style="text-align: left">Alphanumeric <br> ACTIVE / SUSPENDED / CLOSED <br> See Company page for more information.</td>
+</tr>
+<tr>
+<td style="text-align: left">amlFlag</td>
+<td style="text-align: left">Flag to determine if there was an AML hit.</td>
+<td style="text-align: left">Boolean <br> true/false</td>
+</tr>
+<tr>
+<td style="text-align: left">profile_items</td>
+<td style="text-align: left">Key-value pairs of additional information for a Company. Not Secure</td>
+<td style="text-align: left">String</td>
+</tr>
+<tr>
+<td style="text-align: left">profile_items_secure</td>
+<td style="text-align: left">Key-value pairs of private information for a Company. This information is encrypted</td>
+<td style="text-align: left">String</td>
+</tr>
+</tbody></table>
+<h2 id='get-company'>Get Company</h2><h2 id='get-entity-hierarchy'>Get Entity Hierarchy</h2><h2 id='update-company-status'>Update Company Status</h2>
+<p>The Update Company Status API is designed to change a Company status. For a list of statuses and their meaning, see the Company page.
+NOT WORKING AT THIS TIME.</p>
 
 <table><thead>
 <tr>
@@ -532,7 +617,7 @@ Response
 </thead><tbody>
 <tr>
 <td>Resource URL</td>
-<td>/company/deleteCompanyAddress</td>
+<td>/company/updateCompanyStatus</td>
 </tr>
 <tr>
 <td>Request Headers</td>
@@ -544,7 +629,7 @@ Response
 </tr>
 <tr>
 <td>Entitlements</td>
-<td>DELETE_COMPANY_ADDRESS</td>
+<td>UPDATE_COMPANY_STATUS</td>
 </tr>
 <tr>
 <td>Required Authentication</td>
@@ -576,30 +661,154 @@ Response
 </tr>
 <tr>
 <td>Authorization</td>
+<td>Barrer {{sub_token}}</td>
+<td>Optional if token is passed</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Update Company Status Request</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+</span><span class="s2">"companyId"</span><span class="p">:</span><span class="s2">"40611"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"companyName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The Testing Company"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"companyStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACTIVE"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Update Company Status Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+</span><span class="s2">"updateCompanyStatusResponse"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="s2">"contextResponse"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="s2">"tenantName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"channel_sdk"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"statusCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SUCCESS"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+ </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='request-parameters-2'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: center">Required</th>
+<th style="text-align: left">Description</th>
+<th style="text-align: left">Value/Range</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">companyId</td>
+<td style="text-align: center">yes</td>
+<td style="text-align: left">Unique Company identifier generated when the company was initially created with the Create Company API.</td>
+<td style="text-align: left">Integer</td>
+</tr>
+<tr>
+<td style="text-align: left">company name</td>
+<td style="text-align: center">no</td>
+<td style="text-align: left">Company name. This value does not need to be unique, and is for informational use only. Cannot be used in a search string.</td>
+<td style="text-align: left">Alphanumeric</td>
+</tr>
+<tr>
+<td style="text-align: left">company status</td>
+<td style="text-align: center">yes</td>
+<td style="text-align: left">Status of a Company. Changes the current status of a company.</td>
+<td style="text-align: left">ACTIVE/SUSPENDED/CLOSED</td>
+</tr>
+</tbody></table>
+<h3 id='response-parameters-2'>Response Parameters</h3>
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Description</th>
+<th style="text-align: left">Value/Range</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">contextResponse</td>
+<td style="text-align: left">Response context.</td>
+<td style="text-align: left"><ul> <li>tenantName <li>statusCode  - See status codes </li> <li> additionalStatusCode</li> <li> statusMessage </li> <li> additionalStatusMessage </li> <li> errorArgs </li> <li> errors</td>
+</tr>
+<tr>
+<td style="text-align: left">companyID</td>
+<td style="text-align: left">Unique Company ID. This value was auto-generated when the company was initially created.</td>
+<td style="text-align: left">Integer</td>
+</tr>
+</tbody></table>
+<h2 id='delete-company-address'>Delete Company Address</h2>
+<p>Removes address information from a Company. This API operates on one company address entry using the unique address ID that was created when the company address was initially entered in the system.</p>
+
+<table><thead>
+<tr>
+<th>Method</th>
+<th>Post</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Resource URL</td>
+<td>/company/deleteCompanyAddress</td>
+</tr>
+<tr>
+<td>Request Headers</td>
+<td>application/json text/plain</td>
+</tr>
+<tr>
+<td>Response Formats</td>
+<td>application/json text/plain; charset=utf-8</td>
+</tr>
+<tr>
+<td>Entitlements</td>
+<td>DELETE_COMPANY_ADDRESS</td>
+</tr>
+<tr>
+<td>Required Authentication</td>
+<td>Yes</td>
+</tr>
+</tbody></table>
+<h3 id='header-parameters-3'>Header Parameters</h3>
+<table><thead>
+<tr>
+<th>Content-Type</th>
+<th>application/json</th>
+<th>Comment</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Token</td>
+<td>Execute the SignOn request as the caller to generate a new token. )</td>
+<td>Optional if Authorization is passed</td>
+</tr>
+<tr>
+<td>tenantName</td>
+<td>Tenant name.  Upper case only.  Entry is case sensitive</td>
+<td></td>
+</tr>
+<tr>
+<td>Api-Key</td>
+<td>API-Key</td>
+<td>TYK Key</td>
+</tr>
+<tr>
+<td>Authorization</td>
 <td>Bearer {{sub_token}}</td>
 <td></td>
 </tr>
 <tr>
-<td></td>
 <td>Optional if token is passed</td>
+<td></td>
 <td></td>
 </tr>
 </tbody></table>
 
 <blockquote>
-<p>Request
-```json
-Request</p>
+<p>Delete Company Address Request</p>
 </blockquote>
-
-<p>{
-&quot;companyId&quot;:&quot;1413&quot;,
-&quot;addressId&quot;:&quot;7&quot;
-}
-```</p>
-
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+</span><span class="s2">"companyId"</span><span class="p">:</span><span class="s2">"1413"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"addressId"</span><span class="p">:</span><span class="s2">"7"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 <blockquote>
-<p>Successful Response</p>
+<p>Delete Company Address Successful Response</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="s2">"deleteCompanyAddressResponse"</span><span class="p">:{</span><span class="w">
 </span><span class="s2">"contextResponse"</span><span class="p">:{</span><span class="s2">"tenantName"</span><span class="p">:</span><span class="s2">"CBD"</span><span class="p">,</span><span class="w">
@@ -610,7 +819,7 @@ Request</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
-<p>Error  Response
+<p>Delete Company Address Error Response
 Error if an invalid address ID is submitted
 Response HTTP 1/1 200 OK</p>
 </blockquote>
@@ -649,7 +858,7 @@ Response HTTP 1/1 200 OK</p>
 <td style="text-align: left">Integer</td>
 </tr>
 </tbody></table>
-<h3 id='response-parameters'>Response Parameters</h3>
+<h3 id='response-parameters-3'>Response Parameters</h3>
 <table><thead>
 <tr>
 <th style="text-align: left">Name</th>
@@ -674,36 +883,12 @@ Response HTTP 1/1 200 OK</p>
 </tr>
 </tbody></table>
 <h2 id='get-company-users'>Get Company Users</h2><h2 id='close-company'>Close Company</h2>
-<p><link href="style.less" rel="stylesheet"></link></p>
-
 <p>This operation closes a company and remove all users from the company. Closing a company changes the status flag from &quot;ACTIVE&quot; to
-&quot;CLOSED&quot; when the operation has completed. The company info is not removed from the database.
-Close company also has the option of closing all child companies and removing all the associated company users from the hierarchical tree.</p>
+&quot;CLOSED&quot; when completed and does not removed it from the database. This operation also has the option of closing all child
+companies and removing all their associated company users from the hierarchical tree.</p>
 
 <p>Before the company is closed, a query is performed to verify all the companies&#39; have a zero balance. If there is a balance, the company cannot be closed.</p>
 
-<blockquote>
-<p>Close Company REQUEST</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-</span><span class="s2">"companyId"</span><span class="p">:</span><span class="s2">"40612"</span><span class="p">,</span><span class="w">
-</span><span class="s2">"closeUsers"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
-</span><span class="s2">"closeChildCompanies"</span><span class="p">:</span><span class="kc">true</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<blockquote>
-<p>Close Company RESPONSE</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-</span><span class="s2">"closeCompanyResponse"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span><span class="s2">"contextResponse"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span><span class="s2">"tenantName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CBD"</span><span class="p">,</span><span class="w">
-</span><span class="s2">"statusCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SUCCESS"</span><span class="p">,</span><span class="w">
-</span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
-</span><span class="p">},</span><span class="w">
-</span><span class="s2">"companyId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"40612"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
 <table><thead>
 <tr>
 <th>Method</th>
@@ -731,7 +916,7 @@ Close company also has the option of closing all child companies and removing al
 <td>Yes</td>
 </tr>
 </tbody></table>
-<h3 id='header-paramaters'>Header Paramaters</h3>
+<h3 id='header-parameters-4'>Header Parameters</h3>
 <table><thead>
 <tr>
 <th>Content-Type</th>
@@ -760,7 +945,30 @@ Close company also has the option of closing all child companies and removing al
 <td>Optional if token is passed</td>
 </tr>
 </tbody></table>
-<h3 id='request-parameters-2'>Request Parameters</h3>
+
+<blockquote>
+<p>Close Company Request</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+</span><span class="s2">"companyId"</span><span class="p">:</span><span class="s2">"40612"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"closeUsers"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+</span><span class="s2">"closeChildCompanies"</span><span class="p">:</span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Close Company Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+</span><span class="s2">"closeCompanyResponse"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="s2">"contextResponse"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="s2">"tenantName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CBD"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"statusCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SUCCESS"</span><span class="p">,</span><span class="w">
+</span><span class="s2">"errors"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span><span class="s2">"companyId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"40612"</span><span class="w">
+ </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='request-parameters-3'>Request Parameters</h3>
 <table><thead>
 <tr>
 <th style="text-align: left">Name</th>
@@ -788,7 +996,7 @@ Close company also has the option of closing all child companies and removing al
 <td style="text-align: left">Boolean<br> True/False</td>
 </tr>
 </tbody></table>
-<h3 id='response-parameters-2'>Response Parameters</h3>
+<h3 id='response-parameters-4'>Response Parameters</h3>
 <table><thead>
 <tr>
 <th style="text-align: left">Name</th>
@@ -798,19 +1006,79 @@ Close company also has the option of closing all child companies and removing al
 </thead><tbody>
 <tr>
 <td style="text-align: left">contextResponse</td>
-<td style="text-align: left">Response context</td>
+<td style="text-align: left">Response context.</td>
 <td style="text-align: left">tenantName<br> statusCode - See status codes<br> additionalStatusCode<br> statusMessage<br> additionalStatusMessage<br> errorArgs<br> errors</td>
 </tr>
 <tr>
 <td style="text-align: left">companyID</td>
 <td style="text-align: left">Unique Company ID. This value was auto-generated when the company was initially created.</td>
-<td style="text-align: left">Autogenerated Integer</td>
+<td style="text-align: left">Integer</td>
 </tr>
 </tbody></table>
 <h1 id='persons'>Persons</h1><h2 id='person-accounts'>Person Accounts</h2><h2 id='person-credentials'>Person Credentials</h2><h2 id='person-roles'>Person Roles</h2><h2 id='person-profiles'>Person Profiles</h2><h2 id='person-contact-info'>Person Contact Info</h2><h2 id='notifications'>Notifications</h2><h1 id='money-containers'>Money Containers</h1><h2 id='add-money-container'>Add Money Container</h2><h2 id='create-account'>Create Account</h2>
+<table><thead>
+<tr>
+<th>Method</th>
+<th>Post</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Resource URL</td>
+<td>/moneyContainer/accounts</td>
+</tr>
+<tr>
+<td>Request Headers</td>
+<td>application/json text/plain</td>
+</tr>
+<tr>
+<td>Response Formats</td>
+<td>application/json text/plain; charset=utf-8</td>
+</tr>
+<tr>
+<td>Entitlements</td>
+<td>CLOSE_COMPANY</td>
+</tr>
+<tr>
+<td>Required Authentication</td>
+<td>Yes</td>
+</tr>
+</tbody></table>
+<h3 id='header-parameters-5'>Header Parameters</h3>
+<table><thead>
+<tr>
+<th>Content-Type</th>
+<th>application/json</th>
+<th>Comment</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Token</td>
+<td>Execute the SignOn request as the caller to generate a new token. )</td>
+<td>Optional if Authorization is passed</td>
+</tr>
+<tr>
+<td>tenantName</td>
+<td>Tenant name.  Upper case only.  Entry is case sensitive</td>
+<td></td>
+</tr>
+<tr>
+<td>Api-Key</td>
+<td>API-Key</td>
+<td>TYK Key</td>
+</tr>
+<tr>
+<td>Authorization</td>
+<td>Bearer {{sub_token}}</td>
+<td>Optional if token is passed</td>
+</tr>
+</tbody></table>
+
 <blockquote>
-<p>A subscriber creates a SVA account.
-Create Account Request</p>
+<p>Create Account Request</p>
+
+<blockquote>
+<p>A subscriber creates a SVA account.</p>
+</blockquote>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"personId"</span><span class="p">:</span><span class="s2">"1394952276"</span><span class="p">,</span><span class="w">
@@ -839,8 +1107,11 @@ Create Account Request</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
-<p>A Company User creates a SVA for their company.
-Create Account Request</p>
+<p>Create Account Request</p>
+
+<blockquote>
+<p>A Company User creates a SVA for their company.</p>
+</blockquote>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"entityId"</span><span class="p">:</span><span class="s2">"307"</span><span class="p">,</span><span class="w">
@@ -880,64 +1151,7 @@ Example:</p>
        </span><span class="s2">"Please provide a valid currency code."</span><span class="p">,</span><span class="w">
    </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
-<table><thead>
-<tr>
-<th>Method</th>
-<th>Post</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Resource URL</td>
-<td>/moneyContainer/accounts</td>
-</tr>
-<tr>
-<td>Request Headers</td>
-<td>application/json text/plain</td>
-</tr>
-<tr>
-<td>Response Formats</td>
-<td>application/json text/plain; charset=utf-8</td>
-</tr>
-<tr>
-<td>Entitlements</td>
-<td>CLOSE_COMPANY</td>
-</tr>
-<tr>
-<td>Required Authentication</td>
-<td>Yes</td>
-</tr>
-</tbody></table>
-<h3 id='header-paramaters-2'>Header Paramaters</h3>
-<table><thead>
-<tr>
-<th>Content-Type</th>
-<th>application/json</th>
-<th>Comment</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>Token</td>
-<td>Execute the SignOn request as the caller to generate a new token. )</td>
-<td>Optional if Authorization is passed</td>
-</tr>
-<tr>
-<td>tenantName</td>
-<td>Tenant name.  Upper case only.  Entry is case sensitive</td>
-<td></td>
-</tr>
-<tr>
-<td>Api-Key</td>
-<td>API-Key</td>
-<td>TYK Key</td>
-</tr>
-<tr>
-<td>Authorization</td>
-<td>Barrer {{sub_token}}</td>
-<td>Optional if token is passed</td>
-</tr>
-</tbody></table>
-<h3 id='overview'>Overview</h3>
+</span></code></pre><h3 id='overview'>Overview</h3>
 <p>This application creates a financial account on the third party system. A third party system may be either a coupon or a loyalty program provider.
 When an account is initially requested, a new account is created in the third party. After the account is successfully created on the third party, a new Money Container is created in the Switch with a unique ID. This unique ID is used as the reference when accessing the money container.
 <a href="http://www.google.com">See <em>Money Containers</em></a> for a full list of container types, sub-types, input parameters, attributes, and secure attributes for all money containers.</p>
@@ -948,7 +1162,7 @@ When an account is initially requested, a new account is created in the third pa
 <li>Company Users cannot create personal Money Containers, or use Money Containers for personal use.</li>
 <li>Subscribers can create accounts for their own SVAs, Offers and Loyalty programs.</li>
 </ul>
-<h3 id='request-parameters-3'>Request Parameters</h3>
+<h3 id='request-parameters-4'>Request Parameters</h3>
 <table><thead>
 <tr>
 <th style="text-align: left">Name</th>
@@ -1014,7 +1228,7 @@ When an account is initially requested, a new account is created in the third pa
 <td style="text-align: left">string</td>
 </tr>
 </tbody></table>
-<h3 id='response-parameters-3'>Response Parameters</h3>
+<h3 id='response-parameters-5'>Response Parameters</h3>
 <table><thead>
 <tr>
 <th style="text-align: left">Name</th>
@@ -1033,18 +1247,153 @@ When an account is initially requested, a new account is created in the third pa
 <h3 id='examples'>Examples</h3>
 <p>** Note:**
 * The money container flag is set to <code>false</code> by default when it&#39;s initially created.  In order for a money container to be accessible, the value must be set to <code>true</code>.</p>
-<h2 id='get-money-containers'>Get Money Containers</h2><h2 id='update-money-containers'>Update Money Containers</h2><h2 id='remove-money-containers'>Remove Money Containers</h2><h2 id='get-account-balance'>Get Account Balance</h2><h2 id='get-validation-fields'>Get Validation Fields</h2><h1 id='offers'>Offers</h1><h1 id='rewards'>Rewards</h1><h1 id='transactions'>Transactions</h1><h2 id='prepare-transaction'>Prepare Transaction</h2><h2 id='execute-transaction'>Execute Transaction</h2><h2 id='cancel-transaction'>Cancel Transaction</h2><h2 id='get-transaction-details'>Get Transaction Details</h2><h2 id='transaction-history-lookup'>Transaction History Lookup</h2><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<h2 id='get-money-containers'>Get Money Containers</h2>
+<p>This JSON operation retrieves a listing of all existing Money Containers that belong to a Person or a Company. This API will only return Money
+Container&#39;s in the &quot;ACTIVE&quot; state and not Money Containers that are marked as &quot;DELETED&quot;.</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre>
+<ul>
+<li>A Subscriber can retrieve a list of their own Money Containers, and not another Subscriber.</li>
+<li>A Company User can retrieve a list of all the Money Containers that exist for another Person. An example use case would be a Customer
+Service Representative receiving a call from a Subscriber, and acting on behalf that Subscriber.</li>
+<li>A Company User can retrieve a list of Money Containers that exist for a Company.</li>
+</ul>
+
+<div class="alert alert-danger" role="alert">
+Need a Money Container?<br>
+Money Containers are created on the MoTEAF's Core Switch system using either the Add Money Container or Create Account API.
+</div>
+
+<table><thead>
+<tr>
+<th>Method</th>
+<th>POST</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Resource URL</td>
+<td>/moneyContainer/get</td>
+</tr>
+<tr>
+<td>Request Headers</td>
+<td>application/json<br> text/plain</td>
+</tr>
+<tr>
+<td>Response Formats</td>
+<td>application/json <br>text/plain; charset=utf-8</td>
+</tr>
+<tr>
+<td>Entitlements</td>
+<td>GET_MONEY_CONTAINERS</td>
+</tr>
+<tr>
+<td>Required Authentication</td>
+<td>Yes</td>
+</tr>
+</tbody></table>
+<h3 id='header-parameters-6'>Header Parameters</h3>
+<table><thead>
+<tr>
+<th>Content-Type</th>
+<th>application/json</th>
+<th>Comment</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Token</td>
+<td>Execute the SignOn request as the caller to generate a new token. )</td>
+<td>Optional if Authorization is passed</td>
+</tr>
+<tr>
+<td>tenantName</td>
+<td>Tenant name.  Upper case only.  Entry is case sensitive</td>
+<td></td>
+</tr>
+<tr>
+<td>Api-Key</td>
+<td>API-Key</td>
+<td>TYK Key</td>
+</tr>
+<tr>
+<td>Authorization</td>
+<td>Bearer {{sub_token}}</td>
+<td>Optional if token is passed</td>
+</tr>
+</tbody></table>
+<h3 id='request-parameters-5'>Request Parameters</h3>
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Required</th>
+<th style="text-align: left">Description</th>
+<th style="text-align: left">Value/Range</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">personId</td>
+<td style="text-align: left">yes</td>
+<td style="text-align: left">ID of the Person in the platform. This was generated with the Create Person or Setup Account APIs. This value can be obtained using the Get Person API.</td>
+<td style="text-align: left">This value is generated on the server for each Person.</td>
+</tr>
+<tr>
+<td style="text-align: left">entityID</td>
+<td style="text-align: left">no - if calling on a Person <br> yes - if called</td>
+<td style="text-align: left">Id of the Company in the Platform. Is generated in Create Company API. Required only if retrieving Money Containers for a Company.</td>
+<td style="text-align: left">This value is generated on the server for each Company.</td>
+</tr>
+</tbody></table>
+
 <blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
+<p>Get Money Container REQUEST</p>
 </blockquote>
-<pre class="highlight plaintext"><code>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+</span><span class="s2">"personId"</span><span class="p">:</span><span class="s2">"1394952276"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='response-parameters-6'>Response Parameters</h3>
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Description</th>
+<th style="text-align: left">Value/Range</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">contextResponse</td>
+<td style="text-align: left">Response context</td>
+<td style="text-align: left">ContextResponse type</td>
+</tr>
+<tr>
+<td style="text-align: left">containerType</td>
+<td style="text-align: left">Money Container Type. See MoTEAF API Reference, Money Containers, for a list of valid money containers.</td>
+<td style="text-align: left">See Money Containers for valid types.</td>
+</tr>
+<tr>
+<td style="text-align: left">subType</td>
+<td style="text-align: left">Money Container SubType. See MoTEAF API Reference, Money Containers, for a list of valid money containers.</td>
+<td style="text-align: left">See Money Containers for valid sub-types.</td>
+</tr>
+<tr>
+<td style="text-align: left">last4AccountDigits</td>
+<td style="text-align: left">The last four digits of the account number associated with the money container. E.g. Last 4-digits of the credit card number.</td>
+<td style="text-align: left">4 digits</td>
+</tr>
+<tr>
+<td style="text-align: left">default</td>
+<td style="text-align: left">Is the Money Container setup as default for all payments or not.</td>
+<td style="text-align: left">true or false</td>
+</tr>
+<tr>
+<td style="text-align: left">attributes</td>
+<td style="text-align: left">Key–&gt; Value pairs representing tenant specific information that is passed with the money container.</td>
+<td style="text-align: left">Key = ACCOUNT_NAME  Value = Name on the Card<br> Key = EXPIRE_YEAR Value = Two digits representing the year the card expires<br> Key = EXPIRE_MONTH Value = Two digits representing the month the card expires<br> Key = EXTERNAL_ID Value = ID or card number of the external account</td>
+</tr>
+</tbody></table>
 
-
-&gt; The above command returns JSON structured like this:
-</code></pre><h1 id='errors'>Errors</h1>
+<blockquote>
+<p>Get Money Container  RESPONSE<br>
+HTTP 1/1 200 OK
+Coming soon</p>
+</blockquote>
+<h2 id='update-money-containers'>Update Money Containers</h2><h2 id='remove-money-containers'>Remove Money Containers</h2><h2 id='get-account-balance'>Get Account Balance</h2><h2 id='get-validation-fields'>Get Validation Fields</h2><h1 id='offers'>Offers</h1><h1 id='rewards'>Rewards</h1><h1 id='transactions'>Transactions</h1><h2 id='prepare-transaction'>Prepare Transaction</h2><h2 id='execute-transaction'>Execute Transaction</h2><h2 id='cancel-transaction'>Cancel Transaction</h2><h2 id='get-transaction-details'>Get Transaction Details</h2><h2 id='transaction-history-lookup'>Transaction History Lookup</h2><h1 id='errors'>Errors</h1>
 <aside class="notice">
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
 </aside>
@@ -1110,5 +1459,9 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
           </div>
       </div>
     </div>
+
+
   </body>
+<script src="javascripts/copycode.js"></script>
+
 </html>
