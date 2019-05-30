@@ -1,0 +1,335 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Documentation</title>
+    	<style>
+		.copy-code-button {
+			color: #272822;
+			background-color: #FFF;
+			border-color: #272822;
+			border: 2px solid;
+			border-radius: 3px 3px 0px 0px;
+
+			/* right-align */
+			display: block;
+			margin-left: auto;
+			margin-right: 0;
+
+			margin-bottom: -2px;
+			padding: 3px 8px;
+			font-size: 0.8em;
+		}
+
+		.copy-code-button:hover {
+			cursor: pointer;
+			background-color: #F2F2F2;
+		}
+
+		.copy-code-button:focus {
+			/* Avoid an ugly focus outline on click in Chrome,
+		       but darken the button for accessibility.
+		       See https://stackoverflow.com/a/25298082/1481479 */
+			background-color: #E6E6E6;
+			outline: 0;
+		}
+
+		.copy-code-button:active {
+			background-color: #D9D9D9;
+		}
+
+		.highlight pre {
+			/* Avoid pushing up the copy buttons. */
+			margin: 0;
+		}
+	</style>
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+  
+      <script src="javascripts/all_nosearch.js"></script>
+	
+  </head>
+
+  <body class="MoneyContainersIntro" data-languages="[]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+     <a href="http://portal-dev.fintiv.co:3000/portal"> <img src="images/logoFintiv.jpg" class="logo" alt="Logofintiv" /> </a>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#money-containers-introduction" class="toc-h1 toc-link" data-title="Money Containers Introduction">Money Containers Introduction</a>
+          </li>
+          <li>
+            <a href="#money-container-creation" class="toc-h1 toc-link" data-title="Money Container Creation">Money Container Creation</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create-account" class="toc-h2 toc-link" data-title="Create Account">Create Account</a>
+                  </li>
+                  <li>
+                    <a href="#add-money-container" class="toc-h2 toc-link" data-title="Add Money Container">Add Money Container</a>
+                  </li>
+                  <li>
+                    <a href="#container-types-and-their-subtypes" class="toc-h2 toc-link" data-title="Container Types and their Subtypes">Container Types and their Subtypes</a>
+                  </li>
+                  <li>
+                    <a href="#money-container-fees-and-limits" class="toc-h2 toc-link" data-title="Money Container Fees and Limits">Money Container Fees and Limits</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+    </div>
+
+
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <p><link href="style.less" rel="stylesheet"></link></p>
+<h1 id='money-containers-introduction'>Money Containers Introduction</h1>
+<p>A Money Container is a wrapper that encapsulates the information of financial account components used for mobile accounts.
+Money containers are referenced for purchases, bills, and funds transfer. Money containers are also used to store loyalty points,
+earned coupons, and funds that are reserved for a program&#39;s SVA (Stored Value Account) that functions much like a gift card.</p>
+
+<p>Once a money container is created, it is assigned a unique ID, which is stored on the server. Our APIs pass this money container ID
+to a third party connector. For information and a list of connectors see: Third Party Connectors.</p>
+<h1 id='money-container-creation'>Money Container Creation</h1><h2 id='create-account'>Create Account</h2>
+<p>The Create Account API allows users to create Loyalty and Coupon accounts on a third party, and Store Value Accounts (SVA) on
+the core. When the Create Account API is executed, an account is created on a third party system. Once the core receives an
+acknowledgement that the account was successfully created on the third party system, the addmoneyContainer API is executed on
+the Core to generate a new Money Container ID for a user. Coupons, Loyalty Points, and Stored Value Accounts (SVA) are
+product specific, and do not exist outside of the program. If the program ends for the user, these accounts no longer exist for the
+user.</p>
+
+<p><img src="images/createaccount.jpg" alt="image for create account" /></p>
+<h2 id='add-money-container'>Add Money Container</h2>
+<p>The Add Money Container API is also used for creating a money container for a financial account that a user already owns. For
+example, either a Credit, or a Debit Card. The Money Container is loaded with funds after getting authorized. Bank Accounts can
+also have money containers attached, This includes merchant and personal accounts. These accounts are completely unaffected
+if a money container is removed, or added.</p>
+
+<p><img src="addmoneycontainer.jpg" alt="test" /></p>
+<h2 id='container-types-and-their-subtypes'>Container Types and their Subtypes</h2>
+<p>Mozido can process transactions for Container Types and Sub-Types listed in the table below. This table includes all the the
+required parameters names, attributes, and secure attributes to complete transactions for each container sub-type. Attributes listed
+in the &quot;Mandatory Attributes&quot; column are required for a success transaction. &quot;Optional Attributes&quot; are stored on the core server for
+later use. For example, you may want to store the address of a loyalty point customer for birthday mailings. Items that are stored in
+the &quot;Secure Attributes&quot; hstore are both hashed and encrypted, and is in compliance with current security standards. Attributes that
+are not stored in the Secure Attribute hstore are stored in the Attribute hstore as non-secure data. All non-secure data is stored as
+plain text.</p>
+<h2 id='money-container-fees-and-limits'>Money Container Fees and Limits</h2>
+<p>Meta data is information we collect for fees. Every transaction has it&#39;s own fee schedule. To track the fee used and applied to
+transactions, a unique name is assigned, and stored as a Meta Type.</p>
+
+<div class="alert alert-danger" role="alert">
+Card Numbers and CVV
+<li>DO NOT pass a Credit, Debit or Bank Account Number in the attributes. Use the accountNumber parameter.
+<li>The CVV code must not be stored on the server, but passed when the Credit Card is initially added. For
+compliance purposes, the CVV code is sent as an encrypted string over a secure connection to validate a credit
+card.
+</div>
+
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+
+
+  </body>
+<script src="javascripts/copycode.js"></script>
+
+</html>
